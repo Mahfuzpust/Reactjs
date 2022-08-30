@@ -1,0 +1,26 @@
+index.js-->
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const name = "mahfuz";
+const description = 'Sit et lorem ipsum erat justo et et, clita clita.';
+
+const styleDesign = {
+  backgroundColor : "green",
+  textAlign : 'center',
+  padding : '20px'
+}
+
+
+ReactDOM.render(
+
+  <div>
+    <h1 style={styleDesign}> Todo APP </h1>
+    <h2>{name}</h2>
+    <h3>{description}</h3>
+  </div>,
+    document.getElementById('root')
+
+);
