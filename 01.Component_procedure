@@ -1,0 +1,58 @@
+public/index.html-------------->
+
+  <body>
+
+    <div id="root"></div>
+    
+  </body>
+  
+  
+  
+ src/components/Card.js--------->
+ 
+ 
+const name = "mahfuz";
+const description = 'Sit et lorem ipsum erat justo et et, clita clita.';
+
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth();
+const year = date.getFullYear();
+
+function Card(){  
+  return  <div className='card'>
+            <h2 className='name'>{name}</h2>
+            <h3 className='des'>{description}</h3>
+            <p className='date'>{day +"/"+ month +"/"+ year}</p>
+          </div>
+}
+
+export default Card;
+
+
+src/App.js--------------->
+
+import React from 'react';
+import Card from './components/Card';
+
+function App(){
+    return <div>
+        <h1 className='header'> Todo APP </h1>
+        <Card />
+        <Card />
+        <Card />
+    </div>
+}
+
+export default App;
+
+
+src/index.js-------------->
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App.js';
+
+ReactDOM.render( <App />, document.getElementById('root'));
+
