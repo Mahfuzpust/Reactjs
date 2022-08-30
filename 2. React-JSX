@@ -1,0 +1,37 @@
+// JSX er jonno html code js e likha jay and JS code html e likha jai
+// js code html file a likhle second bracket use korte hoy......
+
+
+
+index.html---->
+
+  <body>
+
+    <div id="root"></div>
+    
+  </body>
+  
+
+
+index.js--->
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const value = "mahfuz";  //js code
+const description = 'Sit et lorem ipsum erat justo et et, clita clita.';
+const date = "12/12/2021";
+
+// JSX er jonno html code js e likha jay and JS code html e likha jai
+
+ReactDOM.render(
+
+  <div>
+    <h1> Todo APP </h1>  //html code
+    <h2>{value}</h2>
+    <h3>{description}</h3>  // js code html file a likhle second bracket use korte hoy......
+    <p>{date}</p>
+  </div>,
+    document.getElementById('root')
+
+);
