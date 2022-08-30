@@ -1,0 +1,30 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+const name = "mahfuz";
+const description = 'Sit et lorem ipsum erat justo et et, clita clita.';
+
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth();
+const year = date.getFullYear();
+
+function Card(){
+  return  <div className='card'>
+            <h2 className='name'>{name}</h2>
+            <h3 className='des'>{description}</h3>
+            <p className='date'>{day +"/"+ month +"/"+ year}</p>
+          </div>
+}
+
+ReactDOM.render(
+
+  <div>
+    <h1 className='header'> Todo APP </h1>
+    
+    <Card />
+    <Card />
+    
+  </div>,
+    document.getElementById('root')
+
+);
