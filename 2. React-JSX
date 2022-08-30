@@ -21,6 +21,10 @@ import ReactDOM from 'react-dom';
 const value = "mahfuz";  //js code
 const description = 'Sit et lorem ipsum erat justo et et, clita clita.';
 const date = "12/12/2021";
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth();
+const year = date.getFullYear();
 
 // JSX er jonno html code js e likha jay and JS code html e likha jai
 
@@ -31,6 +35,7 @@ ReactDOM.render(
     <h2>{value}</h2>
     <h3>{description}</h3>  // js code html file a likhle second bracket use korte hoy......
     <p>{date}</p>
+    <p>{day +"/"+ month +"/"+ year}</p>
   </div>,
     document.getElementById('root')
 
