@@ -34,9 +34,10 @@ import Data from './data.json';
 function App(){
     return <div>
         <h1 className='header'> Todo APP </h1>
-        <Card name={Data[0].title} description = {Data[1].des} />
-        <Card name="mahfuz" description ="it is description 2"/>
-        <Card />
+        <Card name={Data[0].title} description = {Data[0].des} />
+        <Card name={Data[1].title} description = {Data[1].des} />
+        <Card name={Data[2].title} description = {Data[2].des} />
+        <Card name={Data[3].title} description = {Data[3].des} />
     </div>
 }
 
