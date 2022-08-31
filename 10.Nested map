@@ -1,0 +1,69 @@
+import React from 'react';
+import Card from './components/Card';
+import Data from './data.json';
+import List from './components/List';
+
+let items = [];
+items = Data.map((item, index) => <Card key ={index} name={item.title} description={item.des}/>)
+
+const users = [
+    {
+        fullName : "mahfuz khan",
+        age : "23",
+        phones : [
+            {
+                home : "0199999",
+                office : "088888"
+            }
+        ]
+    },
+
+    {
+        fullName : "mahfuz ",
+        age : "22",
+        phones :[
+            {
+                home : "0177777",
+                office : "0877777"
+            }
+        ]
+    }
+
+]
+
+
+const App = () => {
+    return (
+      <div>
+          <h1 className='header'> Todo APP </h1>
+          {items}
+          <List />
+
+          { users.map((user, index) => {
+            return <div key={index}>
+                <h3>{user.fullName}</h3>
+                <p>{user.age}</p>
+
+                {user.phones.map((phone, index) => 
+                  <div key={index}>
+                    <p>{phone.home}</p>
+                    <p>{phone.office}</p>
+                  </div>
+                )}
+                </div>
+          })}
+      </div>
+    )
+  }
+
+
+// function App(){
+//     return <div>
+//         <h1 className='header'> Todo APP </h1>
+//         {items}
+//         <List />
+//     </div>
+// }
+
+
+export default App;
