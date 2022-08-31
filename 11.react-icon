@@ -1,0 +1,26 @@
+npm install react-icons --save
+
+import { IconName } from "react-icons/fa";
+
+
+import React from 'react';
+import { FaFacebookF, FaFacebookMessenger } from "react-icons/fa";
+
+const App = () => {
+  return (
+    <div>
+
+        <span>
+            <FaFacebookF />
+        </span>
+        <span>
+            <FaFacebookMessenger />
+        </span>
+
+    </div>
+    
+  )
+}
+
+ 
+export default App;
