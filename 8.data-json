@@ -1,0 +1,43 @@
+src.data.json----->
+
+
+[
+    {
+        "title" : "mahfuz khan raj",
+        "des" : "It is describtion 1"
+    },
+
+    {
+        "title" : "mahfuz khan raj",
+        "des" : "It is describtion 1"  
+    },
+
+    {
+        "title" : "mahfuz khan raj",
+        "des" : "It is describtion 1"  
+    },
+
+    {
+        "title" : "mahfuz khan raj",
+        "des" : "It is describtion 1"  
+    }
+]
+
+
+App.js --------->
+
+
+import React from 'react';
+import Card from './components/Card';
+import Data from './data.json';
+
+function App(){
+    return <div>
+        <h1 className='header'> Todo APP </h1>
+        <Card name={Data[0].title} description = {Data[1].des} />
+        <Card name="mahfuz" description ="it is description 2"/>
+        <Card />
+    </div>
+}
+
+export default App;
