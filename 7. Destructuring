@@ -1,0 +1,36 @@
+App.js------>
+
+
+import React from 'react';
+import Card from './components/Card';
+
+function App(){
+    return <div>
+        <h1 className='header'> Todo APP </h1>
+        <Card name="mahfuz" description ="it is description 1"/>
+        <Card name="mahfuz" description ="it is description 2"/>
+        <Card />
+    </div>
+}
+
+export default App;
+
+
+Card.js------>
+
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth();
+const year = date.getFullYear();
+
+
+function Card(props){  
+  const{name, description} = props;  //dectructuring
+  return  <div className='card'>
+            <h2 className='name'>{name}</h2>
+            <h3 className='des'>{description}</h3>
+            <p className='date'>{day +"/"+ month +"/"+ year}</p>
+          </div>
+}
+
+export default Card;
